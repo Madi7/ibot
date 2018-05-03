@@ -1,2 +1,2 @@
 # ibot
-Just a simple Telegram bot on Python
+Simple Telegram bot on Python
