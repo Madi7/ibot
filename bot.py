@@ -12,14 +12,14 @@ updater = Updater(
 dispatcher = updater.dispatcher
 
 
-def startCommand(bot, update):
+def start_command(bot, update):
     bot.send_message(
         chat_id=update.message.chat_id,
         text='Привет, давай пообщаемся?'
     )
 
 
-def textMessage(bot, update):
+def text_message(bot, update):
     response = 'Получил Ваше сообщение: ' + update.message.text
     bot.send_message(
         chat_id=update.message.chat_id,
@@ -29,11 +29,11 @@ def textMessage(bot, update):
 
 start_command_handler = CommandHandler(
     'start',
-    startCommand
+    start_command
 )
 text_message_handler = MessageHandler(
     Filters.text,
-    textMessage
+    text_message
 )
 dispatcher.add_handler(start_command_handler)
 dispatcher.add_handler(text_message_handler)
